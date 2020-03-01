@@ -1,6 +1,7 @@
 <?php
 ob_start();
 session_start();
+require_once('env.php');
 require_once('Models/Zip.php');
 
 $title = "Zip/send Files";
@@ -64,7 +65,7 @@ if (isset($_POST['sendForm'])) {
       // Compose a simple HTML email message
       $emailMessage = '<html><body>';
       $emailMessage .= '<h1 style="color:#f40;">Zipped file sent</h1>';
-      $emailMessage .= '<a href="download&id=' . $uniqueId . '">Click here to get to the download page: </a>';
+      $emailMessage .= 'Click here to get to the download page: <a href="' . $baseUrl . '/download&id=' . $uniqueId . '">Link</a>';
       $emailMessage .= '</body></html>';
       
       mail($email, 'Vous avez recu un fichier zip', $emailMessage, $headers);

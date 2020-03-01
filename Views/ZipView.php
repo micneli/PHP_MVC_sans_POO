@@ -33,7 +33,7 @@ require_once "header.php";
             <input type="text" name="username" class="form-control" id="formGroupExampleInput" placeholder="Name">
           </div>
           <div class="form-group">
-            <label for="formGroupExampleInput2">Your Email Address</label>
+            <label for="formGroupExampleInput2">Recipient's Email Address</label>
             <input type="email" name="email" class="form-control" id="formGroupExampleInput2" placeholder="Email">
           </div>
 				  <div class="input-group mb-3">
