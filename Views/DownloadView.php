@@ -1,5 +1,6 @@
 <?php
 require_once "header.php";
+session_start();
 ?>
 
 <table>
@@ -9,9 +10,9 @@ require_once "header.php";
   </thead>
   <tbody>
     <tr>
-    <td><?php echo $name; ?></td>
-    // <td><a href="<?php echo "Uploads/$zipPath"; ?>" download>Telecharger</a></td>
-    <td><a href="uploads/<?php echo $zipPath; ?>" target = "__self">Telecharger1</a></td>
+    <td><?php echo $_SESSION['username']; ?></td>
+    <!-- <td><a href="<?php echo "Uploads/$zipPath"; ?>" download>Telecharger</a></td> -->
+    <td><a href="uploads/<?php echo $zipPath; ?>" target = "__self">Telecharger</a></td>
     </tr>
   </tbody>
 </table>
