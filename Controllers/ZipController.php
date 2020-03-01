@@ -3,7 +3,7 @@ ob_start();
 session_start();
 require_once('Models/Zip.php');
 
-$title = "Zip Files";
+$title = "Zip/send Files";
 
 $options = [
   PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC

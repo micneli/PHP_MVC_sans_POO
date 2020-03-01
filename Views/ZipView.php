@@ -3,8 +3,9 @@ require_once "header.php";
 ?>
 
 <?php //include 'upload.php'; ?>
-    <div class="row">
-    	<div class="page-container row-12">
+<div class="container mx-auto">
+    <div class="row mt-5">
+    	<div class="mx-auto">
     		<h4 class="col-12 text-center mb-5">Create Zip File of Multiple Uploaded Files </h4>
     		<div class="row-8 form-container">
             <?php 
@@ -28,14 +29,14 @@ require_once "header.php";
             ?> -->
 		    <form action="" method="post" enctype="multipart/form-data">
           <div class="form-group">
-            <label for="formGroupExampleInput">Example label</label>
+            <label for="formGroupExampleInput">Your Name</label>
             <input type="text" name="username" class="form-control" id="formGroupExampleInput" placeholder="Name">
           </div>
           <div class="form-group">
-            <label for="formGroupExampleInput2">Another label</label>
+            <label for="formGroupExampleInput2">Your Email Address</label>
             <input type="email" name="email" class="form-control" id="formGroupExampleInput2" placeholder="Email">
           </div>
-				  <div class="input-group">
+				  <div class="input-group mb-3">
 						<!-- <div class="input-group-prepend">
 						    <input type="submit" class="btn btn-primary" value="Upload">
 						</div> -->
@@ -44,8 +45,9 @@ require_once "header.php";
 						    <label class="custom-file-label" >Choose File</label>
 						</div>
 					</div>
-          <button type="submit" class="btn btn-primary" name="sendForm">Submit</button>
+          <button type="submit" class="btn btn-primary btn-block" name="sendForm">Submit</button>
 				</form>
     		</div>
 		</div>
+	</div>
 	</div>
