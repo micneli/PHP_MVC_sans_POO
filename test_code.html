@@ -1,0 +1,17 @@
+<?php 
+if(!empty($error)) {
+  ?>
+    <p class="error text-center"><?php echo $error; ?></p>
+  <?php
+  }
+  if(!empty($success)) {
+  ?>
+    <p class="success text-center">
+      Files uploaded successfully and compressed into a zip format
+    </p>
+    <p class="success text-center">
+      <a href="uploads/<?php echo $success; ?>" target="__self">Click here to download the zip file</a>
+    </p>
+  <?php 
+  }
+  ?>
