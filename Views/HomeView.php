@@ -11,7 +11,7 @@ require_once "header.php";
 <div class="container text-center">
   <div class="row">
     <div class="col-md-12">
-      <h2>Zip files and send them to the desired receivers</h2>
+      <h2>Zip files and send them to the desired recipients</h2>
       <p>Make use of a functionality similar to WeTransfer or similar services which is accomplished in PHP by using MVC but without Object Oriented Programming.</p>
       <p><a class="btn btn-secondary btn-lg" href="zip" role="button">Zip and send files &raquo;</a></p>
     </div>
