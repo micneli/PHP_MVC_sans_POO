@@ -1,6 +1,6 @@
 <?php
 
 //ici de traitements
-$title = "Home";
+$title = "WeTransfer2 - Home";
 
 require_once('Views/HomeView.php');
