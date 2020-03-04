@@ -1,2 +1,2 @@
-# PHP_MVC_sans_POO
-File Transfer Website created with PHP MVC without POO
+# File Transfer Website
+The website has been created with PHP MVC without POO
