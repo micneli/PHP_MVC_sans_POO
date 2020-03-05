@@ -56,6 +56,7 @@ if (isset($_POST['sendForm'])) {
       // To send HTML mail, the Content-type header must be set
       $headers  = 'MIME-Version: 1.0' . "\r\n";
       $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+      $from = "mihaljevic.n@codeur.online";
        
       // Create email headers
       $headers .= 'From: '.$from."\r\n".
@@ -65,13 +66,15 @@ if (isset($_POST['sendForm'])) {
       // Compose a simple HTML email message
       $emailMessage = '<html><body>';
       $emailMessage .= '<h1 style="color:#f40;">Zipped file sent</h1>';
-      $emailMessage .= 'Click here to get to the download page: <a href="' . $baseUrl . '/download&id=' . $uniqueId . '">Link</a>';
+      $emailMessage .= 'Click here to get to the download page: <a href="' . $base_url . '/download&id=' . $uniqueId . '">Link</a>';
+      // $emailMessage .= 'Click here to get to the download page: <a href="https://stackoverflow.com/questions/29400864/phpmailer-a-href-link-in-html-mail-isnt-working-correct">Link</a>';
       $emailMessage .= '</body></html>';
       
       mail($email, 'Vous avez recu un fichier zip', $emailMessage, $headers);
 
       $_SESSION['email'] = $email;
       $_SESSION['username'] = $name;
+      // var_dump($base_url, $uniqueId);
       header("Location: messageSent");
       
     } else {
