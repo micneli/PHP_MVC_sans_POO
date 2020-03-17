@@ -1,18 +1,19 @@
-  <?php
-  ob_start();
-  session_start();
-  require_once('env.php');
-  require_once('Models/Zip.php');
+<?php
+ob_start();
+session_start();
+require_once('env.php');
+require_once('Models/Zip.php');
 
-  $title = "Zip/send Files";
+$title = "Zip/send Files";
 
-  $options = [
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
-  ];
+$options = [
+  PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+];
 
-  $pdo = new PDO('mysql:host=' . $host . ';dbname=' . $dbname, $user, $pass, $options);
+$pdo = new PDO('mysql:host=' . $host . ';dbname=' . $dbname, $user, $pass, $options);
 
-  if (isset($_POST['sendForm'])) {
+if (isset($_POST['sendForm'])) {
+  if (!empty($_POST['username']) && !empty($_POST['email']) && !empty($_POST['senderEmail'])) {
     $name = $_POST['username'];
     $email = $_POST['email'];
     $senderEmail = $_POST['senderEmail'];
@@ -80,6 +81,9 @@
         $error = '<strong>Error!! </strong> Please select a file.';
       }
     }
+  } else {
+    $error = "Tous les champs doivent être rempli !";
   }
+}
 
-  require_once('Views/ZipView.php');
+require_once('Views/ZipView.php');

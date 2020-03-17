@@ -28,7 +28,8 @@ Files uploaded successfully and compressed into a zip format
 <?php
               }
 ?> -->
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="" method="post" enctype="multipart/form-data" id="contactForm">
+          <div id="display_error"></div>
           <div class="form-group">
             <label for="formGroupExampleInput">Your Email Address</label>
             <input type="text" name="senderEmail" class="form-control" id="formGroupExampleInput" placeholder="Your Email">
