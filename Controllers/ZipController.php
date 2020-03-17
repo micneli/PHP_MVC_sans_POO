@@ -15,6 +15,7 @@ $pdo = new PDO('mysql:host=' . $host . ';dbname=' . $dbname, $user, $pass, $opti
 if (isset($_POST['sendForm'])) {
   $name = $_POST['username'];
   $email = $_POST['email'];
+  $senderEmail = $_POST['senderEmail'];
 
   if ($_FILES && $_FILES['file']) {
 
@@ -56,7 +57,7 @@ if (isset($_POST['sendForm'])) {
       // To send HTML mail, the Content-type header must be set
       $headers  = 'MIME-Version: 1.0' . "\r\n";
       $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-      $from = "mihaljevic.n@codeur.online";
+      $from = $senderEmail;
        
       // Create email headers
       $headers .= 'From: '.$from."\r\n".
@@ -67,7 +68,6 @@ if (isset($_POST['sendForm'])) {
       $emailMessage = '<html><body>';
       $emailMessage .= '<h1 style="color:#f40;">Zipped file sent</h1>';
       $emailMessage .= 'Click here to get to the download page: <a href="' . $base_url . '/download&id=' . $uniqueId . '">Link</a>';
-      // $emailMessage .= 'Click here to get to the download page: <a href="https://stackoverflow.com/questions/29400864/phpmailer-a-href-link-in-html-mail-isnt-working-correct">Link</a>';
       $emailMessage .= '</body></html>';
       
       mail($email, 'Vous avez recu un fichier zip', $emailMessage, $headers);

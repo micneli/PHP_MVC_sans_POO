@@ -28,6 +28,10 @@ require_once "header.php";
             }
             ?> -->
 		    <form action="" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="formGroupExampleInput">Your Email Address</label>
+            <input type="text" name="senderEmail" class="form-control" id="formGroupExampleInput" placeholder="Your Email">
+          </div>
           <div class="form-group">
             <label for="formGroupExampleInput">Your Name</label>
             <input type="text" name="username" class="form-control" id="formGroupExampleInput" placeholder="Name">
@@ -41,8 +45,8 @@ require_once "header.php";
 						    <input type="submit" class="btn btn-primary" value="Upload">
 						</div> -->
 						<div class="custom-file">
-						    <input type="file" class="custom-file-input" name="file[]" multiple>
-						    <label class="custom-file-label" >Choose File</label>
+              <input type="file" class="custom-file-input" name="file[]" multiple>
+              <label class="custom-file-label" >Choose File</label>
 						</div>
 					</div>
           <button type="submit" class="btn btn-primary btn-block" name="sendForm">Submit</button>
