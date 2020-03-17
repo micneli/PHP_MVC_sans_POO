@@ -1,6 +1,7 @@
 <?php
 
-function insertIntoDB($name, $email, $success, $uniqueId) {
+function insertIntoDB($name, $email, $success, $uniqueId)
+{
   global $pdo;
   $sql = "INSERT INTO files SET name_source = :name_source, email_dest = :email_dest, zipped_file = :zipped_file, date = '', message = '' , uniq = :uniq";
   $req = $pdo->prepare($sql);
